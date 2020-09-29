@@ -1,0 +1,63 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="256.0000" height="256.0000" viewBox="0.0000 0.0000 256.0000 256.0000"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" onload='Init(evt)'>
+   <script type='text/ecmascript'><![CDATA[
+          var SVGDocument = null;
+          var SVGRoot = null;
+          function Init(evt)
+          {
+                SVGDocument = evt.target.ownerDocument;
+                 SVGRoot = SVGDocument.documentElement;
+          }
+         function Toggle(evt,targetId)
+          {
+                      var obj = evt.target;
+         if (targetId)
+         {
+            obj = SVGDocument.getElementById(targetId);
+         }
+                id=obj.getAttributeNS(null, 'id');
+                var myobj,i,myid,strs,params,Number,states,state,cur
+                strs=id.split("(");
+                params=strs[1].split(";");
+                Number=strs[0];
+                states=params[1];
+                state=params[2];
+                cur=params[3];
+                states=parseInt(states);
+                state=parseInt(state);
+                if(state+1>=states)
+                        state=0;
+                else
+                        state=state+1;
+                for(i=0;i<states;i++)
+                {
+                        myid=Number+'('+params[0]+';'+states+';'+i+';'+cur+';'+params[4]+';'+params[5]+';'+params[6]+';'+params[7];
+                        myobj=SVGDocument.getElementById(myid);
+                        if(i==state)
+                        {
+                                myobj.setAttributeNS(null, 'visibility', 'visible');
+                        }
+                        else
+                        {
+                                myobj.setAttributeNS(null, 'visibility', 'hidden');
+                        }
+                }
+        }
+   ]]></script>
+<linearGradient id="SVGID_1_"  x1="4.0901%" y1="4.0948%" x2="95.9366%" y2="95.9413%" >
+<stop offset="0.0000%"   stop-color="#5E72E4" stop-opacity="1.0000"/>
+<stop offset="100.0000%"   stop-color="#778AFF" stop-opacity="1.0000"/>
+</linearGradient>
+<path transform="matrix(1.0000,0.0000,0.0000,1.0000,128.0000,128.0000)" d="M-92.1881,-128.0000L92.1881,-128.0000C111.9498,-128.0000,128.0000,-111.9498,128.0000,-92.1881L128.0000,92.1881C128.0000,111.9498,111.9498,128.0000,92.1881,128.0000L-92.1881,128.0000C-111.9498,128.0000,-128.0000,111.9498,-128.0000,92.1881L-128.0000,-92.1881C-128.0000,-111.9498,-111.9498,-128.0000,-92.1881,-128.0000Z" style="fill:url(#SVGID_1_);stroke:none "/>
+<text transform="matrix(2.3750,0.0000,0.0000,2.3750,128.0000,203.5000)" x="0.0000" y="-128.0000" >
+<tspan  x="-50.0000" y="12.0000" space="preserve" font-family="AliHYAiHei-Beta" font-size="24.0000" style="fill-opacity:1.0000;fill:#FFFFFF;stroke:none ">智能家居</tspan></text>
+<linearGradient id="SVGID_2_"  x1="46.7900%" y1="48.0000%" x2="46.7900%" y2="48.0000%" >
+<stop offset="0.0000%"   stop-color="#5E72E4" stop-opacity="1.0000"/>
+<stop offset="100.0000%"   stop-color="#778AFF" stop-opacity="1.0000"/>
+</linearGradient>
+<path transform="matrix(1.0000,0.0000,0.0000,1.0000,0.7000,0.2000)" d="M-0.0000,0.0000" style="fill:url(#SVGID_2_);stroke:none "/>
+<path transform="matrix(1.0000,0.0000,0.0000,1.0000,128.0000,94.6000)" d="M-0.0500,-73.0000C-43.9500,-73.0000,-79.4500,-39.4671,-79.4500,1.7897C-79.4500,35.0400,-56.3500,63.2039,-24.4500,73.0000L-14.5500,35.2284C-28.5500,29.8594,-38.3500,16.9548,-38.3500,1.7897C-38.3500,-18.1794,-21.1500,-34.2865,-0.0500,-34.2865C21.1500,-34.2865,38.2500,-18.0852,38.2500,1.7897C38.2500,16.8606,28.4500,29.7652,14.4500,35.2284L24.3500,73.0000C56.2500,63.2981,79.3500,35.1342,79.3500,1.7897C79.4500,-39.4671,43.8500,-73.0000,-0.0500,-73.0000Z" style="fill-opacity:1.0000;fill:#FFFFFF;stroke:none "/>
+
+</svg>

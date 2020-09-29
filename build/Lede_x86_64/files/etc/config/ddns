@@ -1,0 +1,35 @@
+
+config ddns 'global'
+	option ddns_dateformat '%F %R'
+	option ddns_loglines '250'
+	option upd_privateip '0'
+
+config service "myddns_ipv4"
+	option service_name	"example.org"
+	option domain		"yourhost.example.org"
+	option username		"your_username"
+	option password		"your_password"
+	option interface	"wan"
+	option ip_source	"network"
+	option ip_network	"wan"
+
+config service "aiyun"
+	option service_name	"example.org"
+	option domain		"yourhost.example.org"
+	option username		"your_username"
+	option password		"your_password"
+	option interface	"wan"
+	option ip_source	"network"
+	option ip_network	"wan"
+
+config service 'myddns_ipv6'
+	option use_ipv6 '1'
+	option service_name 'example.org'
+	option domain 'yourhost.example.org'
+	option username 'your_username'
+	option password 'your_password'
+	option interface 'wan6'
+	option ip_source 'network'
+	option ip_network 'wan6'
+	option lookup_host 'yourhost.example.org'
+
